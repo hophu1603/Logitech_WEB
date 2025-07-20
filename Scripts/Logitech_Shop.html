@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Logitech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      padding-top: 80px; /* dành cho header fixed */
+    }
+
+    /* Header */
+    nav.navbar {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header {
+      padding: 0.5rem 0 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-weight: 700;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .category {
+      width: 140px;
+      text-align: center;
+      text-decoration: none;
+      color: #111;
+      transition: all 0.3s ease;
+    }
+
+    .category img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      background: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category:hover img {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .category span {
+      display: block;
+      margin-top: 0.75rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header chuẩn -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Logitech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Logitech_HOME.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="Logitech_Shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Hero -->
+  <header>
+    <h1>Shop</h1>
+    <p class="text-muted">Explore all categories</p>
+  </header>
+
+  <!-- Info Bar -->
+<section class="info-bar py-3" style="background: #f1f1f1;">
+  <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 text-center">
+    <div class="info-item d-flex align-items-center gap-2">
+      <span class="fs-4">🚚</span>
+      <span>Free shipping on orders over $29.00.</span>
+    </div>
+    <div class="vr d-none d-md-block"></div>
+    <div class="info-item d-flex align-items-center gap-2">
+      <span class="fs-4">🛡️</span>
+      <span>Easy returns and 30-day money back guarantee. <a href="#">Learn more</a></span>
+    </div>
+    <div class="vr d-none d-md-block"></div>
+    <div class="info-item d-flex align-items-center gap-2">
+      <span class="fw-bold">Klarna.</span>
+      <span>Buy now, pay later with payment options services like Klarna.</span>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ✅ Categories -->
+  <section class="categories">
+    <a href="Logitech_Shop_Mic.html" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-mice-new.webp" alt="Mice">
+      <span>Mice</span>
+    </a>
+    <a href="#" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-keyboards-new.webp" alt="Keyboards">
+      <span>Keyboards</span>
+    </a>
+    <a href="#" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-combos-new.webp" alt="Combos">
+      <span>Combos</span>
+    </a>
+    <a href="#" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-webcams-new.webp" alt="Webcams">
+      <span>Webcams</span>
+    </a>
+    <a href="#" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-headsets-earbuds-new.webp" alt="Headsets">
+      <span>Headsets</span>
+    </a>
+    <a href="#" class="category">
+      <img src="/Images/ANH QUICK LINK/quick-link-ipad-keyboard-cases-new.webp" alt="iPad Cases">
+      <span>iPad Cases</span>
+    </a>
+  </section>
+
+  <!-- ✅ Slider Banner -->
+<div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500" data-bs-pause="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/Images/ANH SLIDE/logitech-home-page-banner-1.webp" class="d-block w-100 rounded" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="/Images/ANH SLIDE/Top-Banner.jpg" class="d-block w-100 rounded" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="/Images/ANH SLIDE/logitech-g-pro-series-main-banner-980px-v1.avif" class="d-block w-100 rounded" alt="Banner 3">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </script>
+
+
+
+<a href="Mail.html" class="btn btn-danger position-fixed end-0 bottom-0 m-4 shadow-lg rounded-pill px-4 py-2 fw-bold" style="z-index:1050;">
+  <i class="bi bi-envelope"></i>
+ 
+</a>
+
+    <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Logitech Clone. Built for educational purposes only.</p>
+  </footer>
+</body>
+</html>

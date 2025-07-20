@@ -1,0 +1,75 @@
+/* Mega menu chuẩn full width */
+.nav-item.dropdown {
+  position: static;
+}
+
+.dropdown-menu.mega-menu {
+  display: block; /* Luôn là block, sẽ ẩn bằng visibility */
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: none;
+  border-top: 2px solid #0d6efd;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-menu.mega-menu h6 {
+  margin-bottom: 1rem;
+}
+
+.dropdown-menu.mega-menu a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu.mega-menu a:hover {
+  text-decoration: underline;
+}
+
+.carousel img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.info-bar {
+  background: #f1f1f1;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+
+.info-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-item span {
+  vertical-align: middle;
+}
+
+.info-bar .vr {
+  height: 20px;
+  opacity: 0.2;
+}
+
+
+.info-bar {
+  margin-bottom: 1rem; /* Cách Info Bar với Categories */
+}
+
+.categories {
+  margin-bottom: 2rem; /* Cách Categories với Carousel */
+}
+
+
+

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LogiTech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .hero {
+      position: relative;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .product-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .product-card img {
+      height: 200px;
+      object-fit: contain;
+    }
+    .btn-light.btn-lg:hover {
+      background-color: #f8f9fa;
+      color: #111111;
+      transform: scale(1.05);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .form-control::placeholder {
+      color: #ccc;
+    }
+    .search-box {
+      margin-left: 1rem;
+      width: 200px;
+    }
+    @media (max-width: 768px) {
+      .search-box {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+    nav.navbar {
+        position: relative; 
+        z-index: 10;
+    }
+
+    .search-box {
+  background-color: #444c70; /* tương tự ảnh bạn gửi */
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  width: 250px;
+}
+.search-box input::placeholder {
+  color: #ffffffcc; /* trắng mờ */
+}
+.search-box input {
+  background: transparent;
+  color: white;
+}
+.search-box button {
+  background: none;
+  border: none;
+}
+
+
+  </style>
+</head>
+<body>
+<!-- Header đẹp hơn -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent position-absolute w-100">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Logitech</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Logitech_HOME.html">Home</a>
+        </li>
+
+        <!-- Mega menu -->
+<!-- Mega menu -->
+<li class="nav-item dropdown position-static d-flex align-items-center">
+  <!-- Link Shop -->
+  <a class="nav-link fw-bold" href="Logitech_Shop.html">
+    Shop
+  </a>
+
+  <!-- Toggle Mega Menu -->
+  <a class="nav-link dropdown-toggle ps-1" href="#" id="shopDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </a>
+
+  <div class="dropdown-menu mega-menu shadow-lg border-0 p-4" aria-labelledby="shopDropdown">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-uppercase mb-3">Shop by Category</h6>
+          <ul class="list-unstyled">
+            <li><a href="Logitech_Shop_Mic.html">Mice</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Combos</a></li>
+            <li><a href="#">Headsets & Earbuds</a></li>
+            <li><a href="#">Webcams</a></li>
+            <li><a href="#">iPad Keyboard Cases</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-uppercase mb-3">Shop by Interest</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Play</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold text-uppercase mb-3">Top Products</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Refurbished</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Logitech_Shop.html">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cart</a>
+        </li>
+      </ul>
+
+      <form class="d-flex search-box rounded-pill px-2 ms-3">
+        <input class="form-control border-0 bg-transparent text-white" type="search" placeholder="Search..." aria-label="Search">
+        <button type="submit" class="btn btn-link text-white p-0">
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- Hero Section with Video Background -->
+  <div class="hero fade-in">
+    <video autoplay muted loop playsinline>
+      <source src="/Video/g-hub-hero-desktop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <h1 class="display-4 fw-bold">Wireless Freedom. Ultimate Performance.</h1>
+      <p class="lead">Discover our award-winning mice, keyboards and more.</p>
+      <a href="#products" class="btn btn-light btn-lg mt-3">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Product Cards -->
+  <div class="container my-5 fade-in" id="products">
+    <h2 class="mb-4 text-center">Featured Products</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="/Images/MOUSE/g304-lightspeed-thoma-gallery-1.webp" class="card-img-top" alt="Mouse">
+          <div class="card-body">
+            <h5 class="card-title">G305 LIGHTSPEED</h5>
+            <p class="card-text">Wireless Gaming Mouse - Sayu/Thoma/Shikanoin Heizou Special Edition </p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="/Images/KEYBOARD/g715-gallery-1.webp" class="card-img-top" alt="Keyboard">
+          <div class="card-body">
+            <h5 class="card-title">Keyboard G715</h5>
+            <p class="card-text">Wireless Gaming Keyboard and Palmrest- Mechanical Switches</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://resource.logitech.com/content/dam/logitech/en/products/headsets/zone-vibe-100/gallery/zone-vibe-100-gallery-graphite-1.webp" class="card-img-top" alt="Headset">
+          <div class="card-body">
+            <h5 class="card-title">Zone Vibe 100</h5>
+            <p class="card-text">Lightweight wireless headset with rich audio for work and play.</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Sellers Section -->
+  <div class="container my-5" id="best-sellers">
+    <h2 class="mb-4 text-center">Best Sellers</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="card product-card">
+          <img src="https://resource.logitech.com/w_600,c_limit,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/logitech/en/products/webcams/brio/gallery/brio-gallery-1.webp?v=1" class="card-img-top" alt="Brio Webcam">
+          <div class="card-body">
+            <h5 class="card-title">Logitech Brio</h5>
+            <p class="card-text">Ultra HD webcam with 4K recording and HDR support.</p>
+            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card product-card">
+          <img src="/Images/MOUSE/g502-hero-gallery-1-nb.webp" class="card-img-top" alt="MX Anywhere 3">
+          <div class="card-body">
+            <h5 class="card-title">G502</h5>
+            <p class="card-text">Wired Gaming Mouse</p>
+            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card product-card">
+          <img src="/Images/MOUSE/powerplay-gallery-2-nb.webp" class="card-img-top" alt="Z407 Speakers">
+          <div class="card-body">
+            <h5 class="card-title">POWERPLAY</h5>
+            <p class="card-text">Wireless Charging System</p>
+            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card product-card">
+          <img src="/Images/MOUSE/g203-black-gallery-1.webp" class="card-img-top" alt="Lift Vertical Mouse">
+          <div class="card-body">
+            <h5 class="card-title">G203</h5>
+            <p class="card-text">Ergonomic Wired mouse designed for all-day comfort.</p>
+            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SẢN PHẨM ĐỀ XUẤT CHO BẠN -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="text-center text-uppercase fw-bold mb-4">Recommended products for you</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="card product-card">
+            <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/pro-x-superlight-2/gallery/pro-x-superlight-2-black-1.webp" class="card-img-top" alt="PRO X SUPERLIGHT 2">
+            <div class="card-body text-center">
+              <div class="d-flex justify-content-center gap-2 mb-2">
+                <div class="rounded-circle border" style="width:16px;height:16px;background:black;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:white;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:hotpink;"></div>
+              </div>
+              <h6 class="fw-bold mb-1">PRO X SUPERLIGHT 2</h6>
+              <p class="mb-2 text-primary fw-semibold">3.899.000 đ</p>
+              <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card product-card">
+            <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/pro-x-superlight/gallery/pro-x-superlight-magenta.webp" class="card-img-top" alt="PRO X SUPERLIGHT">
+            <div class="card-body text-center">
+              <div class="d-flex justify-content-center gap-2 mb-2">
+                <div class="rounded-circle border" style="width:16px;height:16px;background:hotpink;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:white;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:red;"></div>
+              </div>
+              <h6 class="fw-bold mb-1">PRO X SUPERLIGHT</h6>
+              <p class="mb-2 text-primary fw-semibold">2.790.000 đ</p>
+              <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="card product-card">
+            <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/pro-x-superlight/gallery/pro-x-superlight-magenta.webp" class="card-img-top" alt="PRO X SUPERLIGHT">
+            <div class="card-body text-center">
+              <div class="d-flex justify-content-center gap-2 mb-2">
+                <div class="rounded-circle border" style="width:16px;height:16px;background:hotpink;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:white;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:red;"></div>
+              </div>
+              <h6 class="fw-bold mb-1">PRO X SUPERLIGHT</h6>
+              <p class="mb-2 text-primary fw-semibold">2.790.000 đ</p>
+              <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="card product-card">
+            <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/pro-x-superlight/gallery/pro-x-superlight-magenta.webp" class="card-img-top" alt="PRO X SUPERLIGHT">
+            <div class="card-body text-center">
+              <div class="d-flex justify-content-center gap-2 mb-2">
+                <div class="rounded-circle border" style="width:16px;height:16px;background:hotpink;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:white;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:red;"></div>
+              </div>
+              <h6 class="fw-bold mb-1">PRO X SUPERLIGHT</h6>
+              <p class="mb-2 text-primary fw-semibold">2.790.000 đ</p>
+              <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="card product-card">
+            <img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/pro-x-superlight/gallery/pro-x-superlight-magenta.webp" class="card-img-top" alt="PRO X SUPERLIGHT">
+            <div class="card-body text-center">
+              <div class="d-flex justify-content-center gap-2 mb-2">
+                <div class="rounded-circle border" style="width:16px;height:16px;background:hotpink;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:white;"></div>
+                <div class="rounded-circle border" style="width:16px;height:16px;background:red;"></div>
+              </div>
+              <h6 class="fw-bold mb-1">PRO X SUPERLIGHT</h6>
+              <p class="mb-2 text-primary fw-semibold">2.790.000 đ</p>
+              <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thêm các slide khác tương tự -->
+
+      </div>
+
+      <!-- Swiper Controls -->
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-pagination mt-3"></div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+      <!-- Pagination (nếu cần) -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Logitech Clone. Built for educational purposes only.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>
+
+
+
+<a href="#products" class="btn btn-danger position-fixed end-0 bottom-0 m-4 shadow-lg rounded-pill px-4 py-2 fw-bold" style="z-index:1050;">
+  🛒 BUY NOW
+</a>
+
+
+</body>
+</html>
