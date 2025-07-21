@@ -71,5 +71,16 @@
   margin-bottom: 2rem; /* Cách Categories với Carousel */
 }
 
+.product-card img {
+  object-fit: contain;
+  height: 200px;  /* Hoặc tuỳ chỉnh */
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
 
 
