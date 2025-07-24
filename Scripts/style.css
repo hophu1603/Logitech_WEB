@@ -81,6 +81,48 @@
   transform: translateY(-5px);
   transition: all 0.3s ease;
 }
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+.swiper-slide {
+  display: flex;
+}
+
+.product-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body .btn {
+  margin-top: auto;
+}
+
+/* xoay dấu + của button thông tin chi tiết*/
+.btn-section .icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-section[aria-expanded="true"] .icon {
+  transform: rotate(45deg); /* Xoay dấu + thành × */
+}
+
 
 
 
