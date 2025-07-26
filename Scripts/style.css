@@ -1,127 +1,216 @@
-/* Mega menu chuẩn full width */
-.nav-item.dropdown {
-  position: static;
+  /* Mega menu chuẩn full width */
+  .nav-item.dropdown {
+    position: static;
+  }
+
+  .dropdown-menu.mega-menu {
+    display: block; /* Luôn là block, sẽ ẩn bằng visibility */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: none;
+    border-top: 2px solid #0d6efd;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .dropdown-menu.mega-menu h6 {
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-menu.mega-menu a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .dropdown-menu.mega-menu a:hover {
+    text-decoration: underline;
+  }
+
+  .carousel img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .info-bar {
+    background: #f1f1f1;
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .info-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .info-item span {
+    vertical-align: middle;
+  }
+
+  .info-bar .vr {
+    height: 20px;
+    opacity: 0.2;
+  }
+
+
+  .info-bar {
+    margin-bottom: 1rem; /* Cách Info Bar với Categories */
+  }
+
+  .categories {
+    margin-bottom: 2rem; /* Cách Categories với Carousel */
+  }
+
+  .product-card img {
+    object-fit: contain;
+    height: 200px;  /* Hoặc tuỳ chỉnh */
+  }
+
+  .product-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  .swiper-slide {
+    display: flex;
+  }
+
+  .product-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card-body .btn {
+    margin-top: auto;
+  }
+
+  /* xoay dấu + của button thông tin chi tiết*/
+  .btn-section .icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-section[aria-expanded="true"] .icon {
+    transform: rotate(45deg); /* Xoay dấu + thành × */
+  }
+
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  .price span {
+    color: #00d2f7
+  }
+  .buy-now-btn {
+    background-color: #00d2f7;
+    color: black;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+  }
+  .buy-now-btn:hover {
+    background-color: #00cc88;
+  }
+/* Overlay */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
-.dropdown-menu.mega-menu {
-  display: block; /* Luôn là block, sẽ ẩn bằng visibility */
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
+/* Box */
+.modal-box {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  position: relative;
+}
+
+/* Form Elements */
+.form-input {
   width: 100%;
-  background: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
   border: none;
-  border-top: 2px solid #0d6efd;
-  padding: 2rem 3rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
+/* Buttons */
+.modal-actions {
+  margin-top: 10px;
 }
 
-.dropdown-menu.mega-menu h6 {
-  margin-bottom: 1rem;
+.btn-confirm {
+  background: #00FFAA;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.dropdown-menu.mega-menu a {
-  color: #333;
-  text-decoration: none;
+.btn-cancel {
+  margin-left: 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.dropdown-menu.mega-menu a:hover {
-  text-decoration: underline;
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.carousel img {
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.info-bar {
-  background: #f1f1f1;
-  font-size: 0.9rem;
-  padding: 10px 0;
-}
-
-.info-bar .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.info-item span {
-  vertical-align: middle;
-}
-
-.info-bar .vr {
-  height: 20px;
-  opacity: 0.2;
-}
-
-
-.info-bar {
-  margin-bottom: 1rem; /* Cách Info Bar với Categories */
-}
-
-.categories {
-  margin-bottom: 2rem; /* Cách Categories với Carousel */
-}
-
-.product-card img {
-  object-fit: contain;
-  height: 200px;  /* Hoặc tuỳ chỉnh */
-}
-
-.product-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-}
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-.swiper-slide {
-  display: flex;
-}
-
-.product-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-body .btn {
-  margin-top: auto;
-}
-
-/* xoay dấu + của button thông tin chi tiết*/
-.btn-section .icon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.btn-section[aria-expanded="true"] .icon {
-  transform: rotate(45deg); /* Xoay dấu + thành × */
-}
 
 
 
